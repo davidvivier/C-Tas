@@ -14,13 +14,13 @@ int main() {
 
 	int i = 0;
 	for (i = 0; i < taille_tab; i++) {
-		printf("insertion de %d\n", tab[i]);
+		//printf("insertion de %d\n", tab[i]);
 		insertion(tab_tas, tab[i]);
 	}
 
 	printf("tas construit : ");
 	afficher(tab_tas);
-	
+
 	for (i = 1; i <= taille_tab; i++) {
 		int valeur = destruction(tab_tas);
 		printf("valeur retiree : %d\n", valeur);

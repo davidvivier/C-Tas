@@ -33,17 +33,17 @@ void afficher(int *tab) {
 
 void insertion(int *tab, int valeur) {
 
-	printf("in insertion()\n");
+	//printf("in insertion()\n");
 
 	// on place l'élément à la position libre la plus à droite sur le dernier niveau,
 	//  càd à la fin du tableau
 	int indiceCourant = tab[0]+1;
 	tab[indiceCourant] = valeur;
 	tab[0]++;
-	afficher(tab);
+	//afficher(tab);
 
 	int pere = indicePere(indiceCourant);
-	printf(" indicePere=%d\n", pere);
+	//printf(" indicePere=%d\n", pere);
 
 	// tant qu'on a besoin de remonter ET qu'on est pas tout en haut
 	while (tab[pere] > tab[indiceCourant] && indiceCourant > 1) {
@@ -51,26 +51,26 @@ void insertion(int *tab, int valeur) {
 		echange(tab, indiceCourant, pere);
 		indiceCourant = pere;
 		pere = indicePere(indiceCourant);
-		printf("   indicePere=%d\n", pere);
-		printf("  tab après echange() : ");
-		afficher(tab);
+		//printf("   indicePere=%d\n", pere);
+		//printf("  tab après echange() : ");
+		//afficher(tab);
 	}
 
-	printf("tab après insertion : ");
-	afficher(tab);
+	//printf("tab après insertion : ");
+	//afficher(tab);
 }
 
 
 
 int destruction(int *tab) {
-	printf("in destruction(");
-	afficher(tab);
-	printf(" )\n");
+	//printf("in destruction(");
+	//afficher(tab);
+	//printf(" )\n");
 
 	// valeur qui sera retournée à la fin
 	int valeur = tab[1];
 	int taille = tab[0];
-	printf("valeur=%d\n", valeur);
+	//printf("valeur=%d\n", valeur);
 
 	// on place la dernière valeur à la racine
 	tab[1] = tab[taille];
@@ -90,12 +90,12 @@ int destruction(int *tab) {
 			indicePlusPetitFils = droite;
 		}
 
-		printf("indiceCourant=%d, indicePlusPetitFils=%d\n", indiceCourant, indicePlusPetitFils);
+		//printf("indiceCourant=%d, indicePlusPetitFils=%d\n", indiceCourant, indicePlusPetitFils);
 
 		if (tab[indiceCourant] > tab[indicePlusPetitFils]) {
 			echange(tab, indiceCourant, indicePlusPetitFils);
 			indiceCourant = indicePlusPetitFils;
-			printf("echange\n");
+			//printf("echange\n");
 		} else {
 			break;
 		}
@@ -103,8 +103,8 @@ int destruction(int *tab) {
 
 	}
 
-	printf(" fin destruction() : ");
-	afficher(tab);
+	//printf(" fin destruction() : ");
+	//afficher(tab);
 	return valeur;
 }
 
