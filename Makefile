@@ -1,8 +1,8 @@
 CFLAGS= -Wall -Wextra -g
 
-main: main.o liste.o
+main: main.o tas.o
 
-main.o: liste.h main.c
+main.o: tas.h main.c
 
 tas.o: tas.c tas.h
 
