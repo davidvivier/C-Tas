@@ -10,6 +10,8 @@ int indiceDroite(int i);
 
 void echange(int *tab, int indice1, int indice2);
 
+void afficher(int *tab);
+
 void insertion(int *tab, int valeur);
 
 #endif
