@@ -9,7 +9,7 @@ int main() {
 	int taille_tab = 17;
 
 
-	int tab_tas[18] ; // Creation du tableau qui sert à stockert le tas
+	int tab_tas[18] ; // Creation du tableau qui sert à stocker le tas
 	tab_tas[0] = 0;
 
 	int i = 0;
@@ -18,8 +18,13 @@ int main() {
 		insertion(tab_tas, tab[i]);
 	}
 
-	printf("tableau final : ");
+	printf("tas construit : ");
 	afficher(tab_tas);
+	
+	for (i = 1; i <= taille_tab; i++) {
+		int valeur = destruction(tab_tas);
+		printf("valeur retiree : %d\n", valeur);
+	}
 
 	return 0;
 }

@@ -14,4 +14,6 @@ void afficher(int *tab);
 
 void insertion(int *tab, int valeur);
 
+int destruction(int *tab);
+
 #endif
